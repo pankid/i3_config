@@ -1,0 +1,12 @@
+X220 Touchpad cursor jump/imprecise
+
+If the touchpad is jumpy/imprecise, copy the two lines below into a new file:
+
+/etc/udev/hwdb.d/90-libinput-x220-touchpad-fw81.hwdb
+
+touchpad:i8042:*
+ LIBINPUT_MODEL_LENOVO_X220_TOUCHPAD_FW81=1
+
+then run udevadm hwdb --update && udevadm control --reload-rules && udevadm trigger 
+
+https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X220#X220_Touchpad_cursor_jump/imprecise
