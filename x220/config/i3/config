@@ -35,7 +35,7 @@ set $right semicolon
 floating_modifier Mod1
 
 # start a terminal
-bindsym Mod1+Return exec kitty
+bindsym Mod1+Return exec xterm
 
 # kill focused window
 bindsym Mod1+Shift+c kill
@@ -143,14 +143,26 @@ bindsym Mod1+Shift+9 move container to workspace $ws9
 bindsym Mod1+Shift+0 move container to workspace $ws10
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10; # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10; # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5.9 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5.9 # decrease screen brightness
 # reload the configuration file
 bindsym Mod1+Shift+t reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+
+##VOLUME STUFF
+#PULSE
+#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+#ALSA
+#bindsym XF86AudioMute exec "amixer set Master toggle"
+bindsym XF86AudioMicMute exec "amixer set Capture toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 3%+"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 3%-"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
