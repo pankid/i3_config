@@ -1,0 +1,9 @@
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+redshift&
+#/home/pan/git/dwm_bar_conf/bar.sh &
+#exec dwm
+exec i3
+
