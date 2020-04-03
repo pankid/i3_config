@@ -5,5 +5,12 @@ export SSH_AUTH_SOCK
 redshift&
 #/home/pan/git/dwm_bar_conf/bar.sh &
 #exec dwm
+
+#slowdown trackpoing, last number, higher is slower
+xinput set-prop 'TPPS/2 IBM TrackPoint' 'Coordinate Transformation Matrix' 1, 0, 0, 0, 1, 0, 0, 0, 8 &
+xinput set-prop 'TPPS/2 IBM TrackPoint'  'libinput Accel Speed' .2 &
+
+protonmail-bridge &
+nextcloud &
 exec i3
 
