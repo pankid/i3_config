@@ -5,5 +5,6 @@ export SSH_AUTH_SOCK
 redshift&
 #/home/pan/git/dwm_bar_conf/bar.sh &
 #exec dwm
+conky &
+protonmail-bridge &
 exec i3
-
