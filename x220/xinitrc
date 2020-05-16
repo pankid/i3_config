@@ -15,5 +15,5 @@ xinput set-prop 'TPPS/2 IBM TrackPoint' 'Coordinate Transformation Matrix' 1, 0,
 xinput set-prop 'TPPS/2 IBM TrackPoint'  'libinput Accel Speed' .2
 
 protonmail-bridge &
-
+amixer set Capture nocap &
 exec i3 
