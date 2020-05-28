@@ -12,5 +12,6 @@ xinput set-prop 'TPPS/2 IBM TrackPoint'  'libinput Accel Speed' .2 &
 
 protonmail-bridge &
 nextcloud &
+amixer set Capture nocap &
 exec i3
 
